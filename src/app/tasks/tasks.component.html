@@ -8,31 +8,25 @@
 </mat-card>
 
 
-  <div class="content" *ngIf="todos.length > 0">
-    <p class="todo-list">
-      <mat-card class="new-card" *ngFor="let todo of todos" [class.completed]="todo.complete">
-        <div class="view">
+<div class="content" *ngIf="todos.length > 0">
+  <p class="todo-list">
+    <mat-card class="new-card" *ngFor="let todo of todos" [class.completed]="todo.complete">
+      <div class="view">
 
-          <button 
-          [ngClass]="todo.complete ? 'done' : 'undone'"
-          mat-mini-fab color="secondary"
-          (click)="toggleTodoComplete(todo)" 
-          >
+
+        <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
+        <button class="toggle-complete" mat-mini-fab color="primary" (click)="removeTodo(todo)"
+          aria-label="Example icon button with a delete icon">
+
+          <mat-icon>delete</mat-icon>
+
+        </button>
+        <button [ngClass]="todo.complete ? 'done' : 'undone'" mat-mini-fab color="basic"
+          (click)="toggleTodoComplete(todo)">
           <mat-icon>check</mat-icon>
         </button>
 
-          <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
-          <button 
-            class="toggle-complete" 
-            mat-mini-fab color="primary" 
-            (click)="removeTodo(todo)" 
-            aria-label="Example icon button with a delete icon">
-
-              <mat-icon>delete</mat-icon>
-
-          </button>
-
-        </div>
-      </mat-card>
-    </p>
-  </div>
+      </div>
+    </mat-card>
+  </p>
+</div>
