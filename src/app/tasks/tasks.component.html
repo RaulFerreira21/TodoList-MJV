@@ -1,6 +1,5 @@
 <div class="projectTitle">Agenda de Compromissos</div>
 
-<div class="mat-display-3">Agenda de Compromissos</div>
 <mat-card class="card">
   <mat-form-field class="input-field">
     <mat-label>O que precisa ser feito?</mat-label>
@@ -8,7 +7,7 @@
   </mat-form-field>
 </mat-card>
 
-<!-- <mat-card class="cards"> -->
+
   <div class="content" *ngIf="todos.length > 0">
     <p class="todo-list">
       <mat-card class="new-card" *ngFor="let todo of todos" [class.completed]="todo.complete">
@@ -20,18 +19,20 @@
           color ="warn" 
           (click)="toggleTodoComplete(todo)" 
           [checked]="todo.complete"></mat-slide-toggle>
-          <!-- <button
-          class="teste"
-          (click)="enableDisableRule()"
-          [ngClass]="{'undone' : toggle, 'done' : !toggle}">
-          </button> -->
 
           <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
-            <button class="toggle-complete" mat-mini-fab color="primary" (click)="removeTodo(todo)" aria-label="Example icon button with a delete icon">
+            
+          <button 
+            class="toggle-complete" 
+            mat-mini-fab color="primary" 
+            (click)="removeTodo(todo)" 
+            aria-label="Example icon button with a delete icon">
+
               <mat-icon>delete</mat-icon>
-            </button>
+
+          </button>
+
         </div>
       </mat-card>
     </p>
   </div>
-<!-- </mat-card> -->

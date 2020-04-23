@@ -16,6 +16,7 @@
  
 
 .new-card{
+ /* border: solid; */
  float: left;
  margin: 0 20px 20px 30px;
 }
@@ -44,7 +45,6 @@
 	word-break: break-all;
 	line-height: 1.2;
 }
-
 .toggleTodoComplete div  {
 	color: #d9d9d9;
 	text-decoration: line-through;
@@ -66,4 +66,10 @@
     margin-right: 10px;
     color:black;
     font-size: 20px;
+}
+.input-field{
+    width: 100%;
+}
+.checked-box{
+    margin: auto 10px;
 }
