@@ -2,7 +2,7 @@
 
 <mat-card class="card">
   <mat-form-field class="input-field">
-    <mat-label>O que precisa ser feito?</mat-label>
+    <mat-label>Adicionar novo Compromisso</mat-label>
     <input matInput class="todo-input" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
   </mat-form-field>
 </mat-card>
@@ -13,12 +13,13 @@
       <mat-card class="new-card" *ngFor="let todo of todos" [class.completed]="todo.complete">
         <div class="view">
 
-          <mat-slide-toggle  
+          <input 
+          type="checkbox"  
           [ngClass]="todo.complete ? 'done' : 'undone'"
           class="checked-box"
           color ="warn" 
           (click)="toggleTodoComplete(todo)" 
-          [checked]="todo.complete"></mat-slide-toggle>
+          [checked]="todo.complete">
 
           <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
             
