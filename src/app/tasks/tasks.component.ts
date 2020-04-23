@@ -25,12 +25,15 @@ export class TasksComponent {
   }
 
   toggleTodoComplete(todo) {
-    this.todoDataService.toggleTodoComplete(todo);
-    console.log(todo)
-  }
+    this.todoDataService.toggleTodoComplete(todo); 
+   }
 
   removeTodo(todo){
     this.todoDataService.deleteTodoById(todo.id);
+  }
+
+  getTodoById(todo){
+    this.todoDataService.getTodoById(todo.id)
   }
 
   get todos(){
