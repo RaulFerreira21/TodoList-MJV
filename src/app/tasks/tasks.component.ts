@@ -14,7 +14,7 @@ export class TasksComponent {
   newTodo:Todo = new Todo();
   toggle = true;
   status = 'Enable';
-
+  todoEdit:Todo;
   constructor(private todoDataService: TodoDataService){
 
   }
@@ -33,7 +33,7 @@ export class TasksComponent {
   }
 
   getTodoById(todo){
-    this.todoDataService.getTodoById(todo.id)
+    this.todoEdit = this.todoDataService.getTodoById(todo.id)
   }
 
   get todos(){
