@@ -22,9 +22,6 @@
         </button>
 
           <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
-          
-          <button [ngClass]="todo.complete ? 'done' : 'undone'" (click)="getTodoById(todo)"  > a</button>
-
           <button 
             class="toggle-complete" 
             mat-mini-fab color="primary" 
