@@ -13,16 +13,18 @@
       <mat-card class="new-card" *ngFor="let todo of todos" [class.completed]="todo.complete">
         <div class="view">
 
-          <input 
-          type="checkbox"  
+          <button 
           [ngClass]="todo.complete ? 'done' : 'undone'"
-          class="checked-box"
-          color ="warn" 
+          mat-mini-fab color="secondary"
           (click)="toggleTodoComplete(todo)" 
-          [checked]="todo.complete">
+          >
+          <mat-icon>check</mat-icon>
+        </button>
 
           <label id="teste" [ngClass]="todo.complete ? 'done' : 'undone'">{{todo.title}}</label>
-            
+          
+          <button [ngClass]="todo.complete ? 'done' : 'undone'" (click)="getTodoById(todo)"  > a</button>
+
           <button 
             class="toggle-complete" 
             mat-mini-fab color="primary" 
