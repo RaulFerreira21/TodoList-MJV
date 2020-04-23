@@ -1,7 +1,10 @@
-.mat-display-3 {
-  width: 15vw;
+.projectTitle {
+  width: 65%;
   margin: 15px auto;
   text-align: center;
+  font: 800 3vw roboto;
+  color:white;
+  text-shadow: 5px 5px 10px black;
 }
 
 .card {
@@ -13,7 +16,6 @@
  
 
 .new-card{
- /* border: solid; */
  float: left;
  margin: 0 20px 20px 30px;
 }
@@ -63,45 +65,3 @@
     color:black;
     font-size: 20px;
 }
-/* -------------------------- */
-/* .toggle[for='toggle-all'] {
-    display: none;
-}
-
-.toggle-all {
-    position: absolute;
-    top: -55px;
-    left: -12px;
-    width: 60px;
-    height: 34px;
-    text-align: center;
-    border: none; /* Mobile Safari */
-
-/*
-.toggle-all:before {
-    content: '❯';
-    font-size: 22px;
-    color: #e6e6e6;
-    padding: 10px 27px 10px 27px;
-}
-
-.toggle-all:checked:before {
-    color: #737373;
-}
-
-.todo-list div .toggle {
-    text-align: center;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-}
-
-.todo-list div .toggle:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
-}
-
-.todo-list div .toggle:checked:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
-} */
