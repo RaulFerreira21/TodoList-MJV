@@ -26,6 +26,7 @@ export class TasksComponent {
 
   toggleTodoComplete(todo) {
     this.todoDataService.toggleTodoComplete(todo);
+    console.log(todo)
   }
 
   removeTodo(todo){
@@ -36,8 +37,4 @@ export class TasksComponent {
     return this.todoDataService.getAllTodos();
   }
 
-  enableDisableRule(){
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-  }
 }
