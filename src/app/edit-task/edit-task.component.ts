@@ -13,12 +13,11 @@ export class EditTaskComponent implements OnInit {
   constructor(private todoDataService: TodoDataService) { }
 
   ngOnInit(): void {
-    
   }
 
   get todos(){
     return this.todoDataService.getAllTodos();
   }
-  
+
 
 }
