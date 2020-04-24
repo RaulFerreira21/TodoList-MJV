@@ -4,6 +4,7 @@
   <mat-form-field class="input-field">
     <mat-label>Adicionar novo Compromisso</mat-label>
     <input matInput class="todo-input" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <button (click)="getCards()">as</button>
   </mat-form-field>
 </mat-card>
 
@@ -29,6 +30,7 @@
         (click)="edit(todo)">
         <mat-icon>assignment_return</mat-icon>
       </button>
+      <button (click)="updateTodos()">Up</button>
       
         <span *ngIf="todo.isEditable; then condition1 else condition2"></span>
         <ng-template #condition1>

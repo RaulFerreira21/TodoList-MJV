@@ -19,7 +19,9 @@ export class TodoDataService {
   apiUrlPost = 'https://ceep.herokuapp.com/cartoes/salvar'
 
   //url da api get()
-  apiUrlGet = 'https://ceep.herokuapp.com/cartoes/carregar'
+  apiUrlGet = 'https://ceep.herokuapp.com/cartoes/carregar?'
+
+  usuario = "pedro@email.com.br"
 
   constructor(private http: HttpClient) { }
 
@@ -47,7 +49,9 @@ export class TodoDataService {
     return todo;
   }
 
-
+  getListCards(){
+    this.http.get('https://ceep.herokuapp.com/cartoes/carregar/?usuario=pedro@email.com.br')
+  }
 
   getAllTodos(): Todo[] {
     return this.todos;
@@ -60,7 +64,18 @@ export class TodoDataService {
   }
 
 
-  postAllTodos(){}
+  mural = {
+    email: 'pedro@email.com.br',
+    todos: this.todos
+  }
+
+
+  postAllTodos(){
+    console.log("post func")
+    let td = this.todos
+    console.log(td[0].title)
+    // this.http.post(this.apiUrlPost,this.mural)
+  }
 
   toggleTodoComplete(todo: Todo){
     let updatedTodo = this.updateTodoById(todo.id, {

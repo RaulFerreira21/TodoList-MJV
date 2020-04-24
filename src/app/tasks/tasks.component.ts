@@ -9,7 +9,7 @@ import { TodoDataService } from '../todo-data.service';
   styleUrls: ['./tasks.component.css'],
   providers: [TodoDataService]
 })
-export class TasksComponent {
+export class TasksComponent implements OnInit {
 
   newTodo:Todo = new Todo();
   toggle = true;
@@ -19,6 +19,10 @@ export class TasksComponent {
 
   constructor(private todoDataService: TodoDataService){
 
+  }
+
+  ngOnInit(): void {
+    this.todoDataService.getListCards()
   }
 
   addTodo(){
@@ -50,6 +54,17 @@ export class TasksComponent {
       // this.todoDataService.updateTodoById(todo); 
       // this.todoDataService.deleteTodoById(todo.id); 
 
+  }
+
+  updateTodos(){
+    console.log(this.todoDataService.todos)
+    this.todoDataService.postAllTodos()
+  }
+
+  getCards(){
+    let teste = this.todoDataService.getListCards()
+    console.log(teste)
+    console.log("aqui")
   }
 
 }
