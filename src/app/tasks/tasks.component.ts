@@ -43,8 +43,10 @@ export class TasksComponent {
   }
 
   edit(todo) {
-    console.log(todo)
+    console.log(todo.id)
+    console.log(todo.isEditable)
       this.testedit = !this.testedit
+      todo.isEditable = !todo.isEditable
       // this.todoDataService.updateTodoById(todo); 
       // this.todoDataService.deleteTodoById(todo.id); 
 
