@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './todo';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,13 @@ export class TodoDataService {
   // Array de To dos
   todos: Todo[] = [];
 
-  constructor() { }
+  //url da api post()
+  apiUrlPost = 'https://ceep.herokuapp.com/cartoes/salvar'
+
+  //url da api get()
+  apiUrlGet = 'https://ceep.herokuapp.com/cartoes/carregar'
+
+  constructor(private http: HttpClient) { }
 
    addTodo(todo: Todo): TodoDataService {
     if (!todo.id) {
@@ -41,6 +48,7 @@ export class TodoDataService {
   }
 
 
+
   getAllTodos(): Todo[] {
     return this.todos;
   }
@@ -51,6 +59,8 @@ export class TodoDataService {
       todo.id === id).pop();
   }
 
+
+  postAllTodos(){}
 
   toggleTodoComplete(todo: Todo){
     let updatedTodo = this.updateTodoById(todo.id, {

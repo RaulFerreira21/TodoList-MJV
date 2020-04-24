@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { TasksComponent } from './tasks/tasks.component';
 import { MaterialModule } from './material/material.module';
@@ -21,8 +21,8 @@ import { EditTaskComponent } from './edit-task/edit-task.component'
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
