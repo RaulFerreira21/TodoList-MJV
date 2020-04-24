@@ -16,7 +16,6 @@ export class TodoDataService {
 
   constructor() { }
 
-
    addTodo(todo: Todo): TodoDataService {
     if (!todo.id) {
       todo.id = ++this.lastId;
@@ -31,7 +30,6 @@ export class TodoDataService {
       todo.id !== id);
     return this;
   }
-
 
   updateTodoById(id: number, values: Object = {}): Todo {
     let todo = this.getTodoById(id);

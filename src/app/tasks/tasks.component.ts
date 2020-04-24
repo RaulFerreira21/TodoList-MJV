@@ -15,6 +15,8 @@ export class TasksComponent {
   toggle = true;
   status = 'Enable';
   todoEdit:Todo;
+  testedit = true;
+
   constructor(private todoDataService: TodoDataService){
 
   }
@@ -38,6 +40,14 @@ export class TasksComponent {
 
   get todos(){
     return this.todoDataService.getAllTodos();
+  }
+
+  edit(todo) {
+    console.log(todo)
+      this.testedit = !this.testedit
+      // this.todoDataService.updateTodoById(todo); 
+      // this.todoDataService.deleteTodoById(todo.id); 
+
   }
 
 }
