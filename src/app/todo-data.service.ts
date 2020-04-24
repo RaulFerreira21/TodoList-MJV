@@ -50,7 +50,7 @@ export class TodoDataService {
   }
 
   getListCards(){
-    this.http.get('https://ceep.herokuapp.com/cartoes/carregar/?usuario=pedro@email.com.br')
+    return this.http.get('https://ceep.herokuapp.com/cartoes/carregar?usuario=pedro@email.com.br')
   }
 
   getAllTodos(): Todo[] {

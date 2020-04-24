@@ -22,7 +22,9 @@ export class TasksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.todoDataService.getListCards()
+    this.todoDataService.getListCards().subscribe((data)=>{
+      console.log(data)
+    })
   }
 
   addTodo(){

@@ -68,6 +68,8 @@
 }
 .input-field{
     width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
 }
 .checked-box{
     margin: auto 10px;
